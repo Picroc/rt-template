@@ -16,7 +16,7 @@ workspace "Basics of ray tracing"
 
    targetdir ("bin/%{prj.name}/%{cfg.longname}")
    objdir ("obj/%{prj.name}/%{cfg.longname}")
-    
+  --[[  
 group "01. Ray generation"
    project "Ray generation lib"
       kind "StaticLib"
@@ -70,7 +70,7 @@ group "02. Moller-Trumbore algorithm"
       links "Moller-Trumbore algorithm lib"
       debugargs { "--benchmark-samples", "25" }
       files {"tests/mt_algorithm_tests.cpp"}
-
+]]
 group "03. Lighting"
    project "Lighting lib"
       kind "StaticLib"
@@ -99,7 +99,7 @@ group "03. Lighting"
       links "Lighting lib"
       debugargs { "--benchmark-samples", "25" }
       files {"tests/lighting_tests.cpp"}
-
+--[[
 group "04. Shadow rays"
    project "ShadowRays lib"
       kind "StaticLib"
@@ -320,3 +320,4 @@ group "10. Denoising"
       includedirs { "src" }
       links "Denoising lib"
       files { "src/denoising_main.cpp" }
+	  ]]

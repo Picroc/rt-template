@@ -1,4 +1,5 @@
 #include "ray_generation.h"
+#include "linalg.h"
 
 int main(int argc, char* argv[])
 {
