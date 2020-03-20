@@ -77,7 +77,7 @@ protected:
 	short width;
 	short height;
 
-	unsigned int raytracing_depth = 10;
+	unsigned int raytracing_depth = 3;
 
 	std::vector<byte3> frame_buffer;
 	Camera camera;

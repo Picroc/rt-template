@@ -54,14 +54,15 @@ int Lighting::LoadGeometry(std::string filename)
                 tinyobj::real_t vy = attrib.vertices[3 * idx.vertex_index + 1];
                 tinyobj::real_t vz = attrib.vertices[3 * idx.vertex_index + 2];
 
-                vertexes.push_back(Vertex(float3{ vx, vy, vz }));
-
-                if (idx.normal_index > 0) {
+                if (idx.normal_index >= 0) {
                     tinyobj::real_t nx = attrib.normals[3 * idx.normal_index + 0];
                     tinyobj::real_t ny = attrib.normals[3 * idx.normal_index + 1];
                     tinyobj::real_t nz = attrib.normals[3 * idx.normal_index + 2];
 
-                    vertexes.push_back(float3{ nx, ny, nz });
+                    vertexes.push_back(Vertex(float3{ vx, vy, vz }, float3{ nx, ny, nz }));
+                }
+                else {
+                    vertexes.push_back(Vertex(float3{ vx, vy, vz }));
                 }
             }
             index_offset += fv;
