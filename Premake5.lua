@@ -16,7 +16,7 @@ workspace "Basics of ray tracing"
 
    targetdir ("bin/%{prj.name}/%{cfg.longname}")
    objdir ("obj/%{prj.name}/%{cfg.longname}")
-  --[[  
+
 group "01. Ray generation"
    project "Ray generation lib"
       kind "StaticLib"
@@ -70,8 +70,7 @@ group "02. Moller-Trumbore algorithm"
       links "Moller-Trumbore algorithm lib"
       debugargs { "--benchmark-samples", "25" }
       files {"tests/mt_algorithm_tests.cpp"}
-]]
---[[
+
 group "03. Lighting"
    project "Lighting lib"
       kind "StaticLib"
@@ -101,7 +100,6 @@ group "03. Lighting"
       debugargs { "--benchmark-samples", "25" }
       files {"tests/lighting_tests.cpp"}
 
---[[
 group "04. Shadow rays"
    project "ShadowRays lib"
       kind "StaticLib"
@@ -131,8 +129,7 @@ group "04. Shadow rays"
       links "ShadowRays lib"
       debugargs { "--benchmark-samples", "25" }
       files {"tests/shadow_rays_tests.cpp"}
-   ]]
---[[
+
 group "05. Reflection"
    project "Reflection lib"
       kind "StaticLib"
@@ -163,7 +160,7 @@ group "05. Reflection"
       links "Reflection lib"
       debugargs { "--benchmark-samples", "25" }
       files {"tests/reflection_tests.cpp"}
---[[
+
 group "06. Refraction"
    project "Refraction lib"
       kind "StaticLib"
@@ -228,8 +225,7 @@ group "07. Anti-aliasing"
       links "AntiAliasing lib"
       debugargs { "--benchmark-samples", "25" }
       files {"tests/anti_aliasing_tests.cpp"}
-]]
---[[
+
 group "08. AABB"
    project "AABB lib"
       kind "StaticLib"
@@ -299,7 +295,7 @@ group "09. BVH"
       links "BVH lib"
       debugargs { "--benchmark-samples", "25" }
       files {"tests/bvh_tests.cpp"}
-]]
+
 group "10. Denoising"
    project "Denoising lib"
       kind "StaticLib"
